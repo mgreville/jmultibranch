@@ -12,7 +12,7 @@ node ('master') {
 //    node {sh 'env'}
     env.SNAPSHOT='TRUE'
     println get.env
-    println ('SNAPSHOT = '.${SNAPSHOT})
+    println 'SNAPSHOT = '. SNAPSHOT
 
     stage ('Stage_1') {
         if(isUnix()) {
@@ -26,6 +26,6 @@ node ('master') {
    }
     stage ('Stage_3') {
         sh "echo '${dlist}'"
-//        println myparam
+        println "${myparam}"
     }
 }
