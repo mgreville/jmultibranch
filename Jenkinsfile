@@ -9,7 +9,7 @@ node ('master') {
 //if (getBinding().hasVariable("myparam")) {
 //        println getProperty("myparam")
 //    }
-    sh 'env'
+//    sh 'env'
     env.SNAPSHOT='TRUE'
     println 'SNAPSHOT = '. SNAPSHOT
 
