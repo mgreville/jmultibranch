@@ -1,7 +1,9 @@
 import jenkins.model.Jenkins
 import jenkins.model.*
 
-        println dlist
+def dlist='/boot'
+def myparam='/boot'
+println dlist
         
 node ('master') {
 if (getBinding().hasVariable("myparam")) {
@@ -9,13 +11,13 @@ if (getBinding().hasVariable("myparam")) {
     }
     node {sh 'env'}
     env.SNAPSHOT='TRUE'
-//    println get.env
-//    println ('SNAPSHOT = '.${SNAPSHOT})
- //   stage ('Stage_1') {
- //       if(isUnix()) {
- //           println ('IS_UNIX = TRUE')
- //       }
- //   }
+    println get.env
+    println ('SNAPSHOT = '.${SNAPSHOT})
+    stage ('Stage_1') {
+        if(isUnix()) {
+            println ('IS_UNIX = TRUE')
+        }
+    }
    stage ('Stage_2') {
        new File("/").eachFile() { file->  
            println file.getName()  
