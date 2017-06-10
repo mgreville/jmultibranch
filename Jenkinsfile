@@ -1,4 +1,4 @@
-:set paste
+#!/usr/bin/env groovy
 
 def dlist='/boot'
 def myparam='/boot'
