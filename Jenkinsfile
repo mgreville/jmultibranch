@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def dlist='/boot'
+def dlist=''
 def myparam='/boot'
 println dlist
 
@@ -14,6 +14,7 @@ node ('master') {
         sh 'cd /; ls -l; ls -d'
       }
       stage ('Stage_3') {
+          println "Branch"
           sh "echo '${dlist}'"
           println "${myparam}"
       }
